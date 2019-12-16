@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vaynenet.www.dao.ArticleDao">
+  <resultMap id="BaseResultMap" type="com.vaynenet.www.entity.Article">
+    <result column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="cost" jdbcType="DECIMAL" property="cost" />
+  </resultMap>
+  <insert id="insert" parameterType="com.vaynenet.www.entity.Article">
+    <selectKey keyProperty="articleId" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into article (`name`, author, cost
+      )
+    values (#{name,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{cost,jdbcType=DECIMAL}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select article_id, `name`, author, cost
+    from article
+  </select>
+</mapper>

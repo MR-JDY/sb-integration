@@ -1,0 +1,114 @@
+#dev environment config
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    #type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      master:
+        jdbc-url: jdbc:mysql://112.74.42.119:3306/springboot?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        username: bms
+        password: 20171219jinyihe
+        driver-class-name: com.mysql.jdbc.Driver
+        hikari:
+                maximum-pool-size: 20
+                max-lifetime: 30000
+                idle-timeout: 30000
+                data-source-properties:
+                  prepStmtCacheSize: 250
+                  prepStmtCacheSqlLimit: 2048
+                  cachePrepStmts: true
+                  useServerPrepStmts: true
+      slave:
+        jdbc-url: jdbc:mysql://120.77.208.13:8066/MycatDemo?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        username: luban
+        password: 974366xqg
+        driver-class-name: com.mysql.jdbc.Driver
+        hikari:
+                maximum-pool-size: 20
+                max-lifetime: 30000
+                idle-timeout: 30000
+                data-source-properties:
+                  prepStmtCacheSize: 250
+                  prepStmtCacheSqlLimit: 2048
+                  cachePrepStmts: true
+                  useServerPrepStmts: true
+
+  #redis jedis配置，注意使用的spring-redis,需要redis的目录结构跟datasource平级
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 5
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: 41E79C97C5B16A0AD76473F780B09CD76E1FE524
+    # 连接超时时间（毫秒）
+    timeout: 1000
+    #设置的缓存过期时间
+    expiration: 86340 # 23小时59分钟 低于token的有效期24*3600
+    jedis:
+      pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 200
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池中的最小空闲连接
+        min-idle: 0
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: test
+    #是否让rabbitmq自动加载绑定
+    autoInitialize: true
+
+    queues:
+      mapList:
+        - bizCode: 101
+          exchange: exchange101
+          routingKey: www.exchange101
+          queues:
+            - www1
+            - www2
+
+        - bizCode: 102
+          exchange: exchange102
+          routingKey: www.exchange102
+          queues:
+            - www3
+            - www4
+
+        - bizCode: 103
+          exchange: exchange103
+          routingKey: www.exchange103
+          queues:
+            - www5
+            - www6
+    listener:
+      direct:
+        retry:
+          enabled: true
+          max-attempts: 3
+          max-interval: 2000
+          default-requeue-rejected: false
+      simple:
+        acknowledge-mode:  manual #消息接收自动确认
+    template:
+      mandatory: true #true:在找不到合适的queue时，强制返回给消费者，fasle:直接丢弃
+    #publisher-confirm-type: correlated
+    #publisher-returns: true
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*Dao.xml
+  type-aliases-package: com.vaynenet.www
+logging:
+  level:
+    root: debug
+
+
+
+
