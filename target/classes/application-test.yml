@@ -1,0 +1,15 @@
+#test environment config
+spring:
+  datasource:
+    url: jdbc:mysql://112.74.42.119:3306/springboot_db?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: bms
+    password: 20171219jinyihe
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:mapping/*Dao.xml
+  type-aliases-package: com.vaynenet.www
+
+logging:
+  level: debug

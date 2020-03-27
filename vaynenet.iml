@@ -4,6 +4,22 @@
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <webroots />
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping />
+        <naming-strategy-map />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -14,14 +30,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.30" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.1.21" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-amqp:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
@@ -36,14 +51,11 @@
     <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.7.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.amqp:spring-amqp:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:1.2.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-redis:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-keyvalue:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-oxm:5.2.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.29" level="project" />
     <orderEntry type="library" name="Maven: io.lettuce:lettuce-core:5.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.43.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.43.Final" level="project" />
@@ -60,11 +72,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-websocket:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.2.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.10.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.27" level="project" />
@@ -121,7 +129,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.amqp:spring-rabbit-junit:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.rabbitmq:http-client:3.2.0.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.security:spring-security-test:5.2.1.RELEASE" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.security:spring-security-core:5.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.2.1.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.security:spring-security-web:5.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
@@ -134,5 +142,59 @@
     <orderEntry type="library" name="Maven: aspectwerkz:aspectwerkz-core:0.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-spring-boot-starter:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-spring-app-process:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-spring-application:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-spring-identity:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-spring-security:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.api:activiti-api-process-model:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.api:activiti-api-process-runtime:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.api:activiti-api-model-shared:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.api:activiti-api-runtime-shared:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-spring:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-bpmn-converter:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-process-validation:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-spring-project:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-orm:5.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.9" level="project" />
+    <orderEntry type="library" name="Maven: javax.el:el-api:2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.29" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-engine:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-project-model:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-email:1.5" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.6" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: de.odysseus.juel:juel-api:2.2.7" level="project" />
+    <orderEntry type="library" name="Maven: de.odysseus.juel:juel-impl:2.2.7" level="project" />
+    <orderEntry type="library" name="Maven: de.odysseus.juel:juel-spi:2.2.7" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.0" level="project" />
+    <orderEntry type="library" name="Maven: joda-time:joda-time:2.10.5" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-bpmn-model:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-api-process-runtime-impl:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-connector-model:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-spring-connector:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-api-model-shared-impl:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-api-runtime-shared-impl:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-spring-security-policies:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-api-task-runtime-impl:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.api:activiti-api-task-model:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.api:activiti-api-task-runtime:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-api-task-model-impl:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-common-util:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-api-process-model-impl:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-spring-process-extensions:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-spring-resource-loader:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti.core.common:activiti-spring-resource-finder:7.1.0.M6" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.29" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.uuid:java-uuid-generator:3.1.4" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:2.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-actuator:2.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.0" level="project" />
   </component>
 </module>

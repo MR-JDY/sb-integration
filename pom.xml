@@ -123,6 +123,24 @@
 			<version>4.3.9.RELEASE</version>
 		</dependency>
 		<!-- 引入AOP依赖end-->
+
+		<!--引入activiti START-->
+		<!-- https://mvnrepository.com/artifact/org.activiti.cloud.dependencies/activiti-cloud-dependencies -->
+		<dependency>
+			<groupId>org.activiti.cloud.dependencies</groupId>
+			<artifactId>activiti-cloud-dependencies</artifactId>
+			<version>7.1.0.M6</version>
+			<type>pom</type>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.activiti/activiti-spring-boot-starter -->
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-spring-boot-starter</artifactId>
+			<version>7.1.0.M6</version>
+		</dependency>
+
+		<!--引入activiti END-->
+
 	</dependencies>
 
 
